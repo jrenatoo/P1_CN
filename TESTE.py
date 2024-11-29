@@ -1,5 +1,8 @@
 def ConvertePara(num, base):
-    """Converte um número (inteiro ou float) para a base desejada."""
+ 
+    "Função que coinverte a base de maneira semelhante à trabalhada em sala,"
+    "faz divisões(inteiras) e utiliza os valores do resto de maneira DownUp(de baixo para cima)"
+    "e assim é representado o número na base nova"
     # Parte inteira
     parte_inteira = int(num)
     digitos = []
@@ -14,7 +17,7 @@ def ConvertePara(num, base):
     # Parte decimal
     parte_decimal = num - int(num)
     digitos_decimal = []
-    while parte_decimal > 0 and len(digitos_decimal) < 10:  # Limita a 10 casas decimais
+    while parte_decimal > 0 and len(digitos_decimal) < 10:  # Limita a 12 casas decimais
         parte_decimal *= base
         digito = int(parte_decimal)
         if digito > 9:
@@ -76,9 +79,9 @@ def multiplicacao(num1, base1, num2, base2):
 
 
 def main():
-    num1 = input("Digite o primeiro número (pode ser float): ")
+    num1 = input("Digite o primeiro número: ")
     base1 = int(input("Digite a base do primeiro número: "))
-    num2 = input("Digite o segundo número (pode ser float): ")
+    num2 = input("Digite o segundo número: ")
     base2 = int(input("Digite a base do segundo número: "))
     operacao = input("Escolha a operação: + para soma ou * para multiplicação: ")
 
